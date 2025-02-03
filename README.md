@@ -1,4 +1,4 @@
-# Campus Collaboration
+# Text-to-Website generator
 
 AI-Powered Text to Website Generator is an intelligent tool that generates fully functional websites based on natural language prompts. Our website generator is designed for users with little or no coding experience, empowering them to create professional-looking websites effortlessly.Built with React, our platform ensures a seamless and intuitive user experience. The generated websites come with modern UI components, responsive layouts, and optimized code—making website creation effortless for users without technical expertise.
 
