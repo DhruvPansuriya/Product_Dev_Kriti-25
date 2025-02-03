@@ -60,6 +60,10 @@ We will consider exploring the following features to enhance the functionality a
 
 The design of pages is at [Figma File Link](https://www.figma.com/file/uglTzpF9RVahosX0g2aU5u/Kriti24-App-Dev?type=design&node-id=1046-2151&mode=design&t=XY9j1ci3AIUhR2Wl-0)
 
+Landing Page
+
+<img src="./Landing.png" alt="login page" height ="300" width="400">
+
 SignUp Page
 
 <img src="./SignUp.jpg" alt="login page" height ="600" width="400">
@@ -68,25 +72,18 @@ Login Page
 
 <img src="./Login.jpg" alt="login page" height ="300" width="400">
 
-Personal Chat
+Dashboard Page
 
-<img src="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/1015f/MainBefore.jpg" alt="login page" height ="300" width="400">
+<img src="./DashBoard.jpg" alt="project page" height ="600" width="400">
 
-Project Page
+Prompt Page
 
-<img src="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/1015f/MainBefore.jpg" alt="project page" height ="600" width="400">
-
-Profile Page
-
-<img src="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/1015f/MainBefore.jpg" alt="profile page" height ="300" width="400">
+<img src="./Prompt.jpg" alt="profile page" height ="300" width="400">
 
 Create Page
 
 <img src="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/1015f/MainBefore.jpg" alt="profile page" height ="300" width="400">
 
-Search Profile
-
-<img src="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/1015f/MainBefore.jpg" alt="profile page" height ="300" width="400">
 
 ## Tech-Stack Used
 
