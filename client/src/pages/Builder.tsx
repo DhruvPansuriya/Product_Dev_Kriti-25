@@ -18,7 +18,8 @@ import fileInfo from "../utils/editableFileInfo.json";
 import sample from "../utils/test_file.json"
 import JSZip from 'jszip';
 import { saveAs } from 'file-saver';
-
+import { Link } from 'react-router-dom';
+import { User, Plus, Briefcase, Home, Info, Phone, LogOut, Trash2 } from "lucide-react";
 interface Project {
   id: string;
   name: string;
@@ -26,8 +27,39 @@ interface Project {
   prompt?: string;
 }
 
+const waitingMessage = [
+  "Hang tight! Your website is being crafted with precision.",
+  "Your site is in the works – just a moment more!",
+  "Bringing your vision to life. This won’t take long!",
+  "We're reviewing everything to ensure perfection.",
+  "You can preview now"
+]
+
+
 export function Builder() {
   const location = useLocation();
+  const [index, setIndex] = useState(0);
+
+  const [running, setRunning] = useState(true); // To track if updates should continue
+
+  useEffect(() => {
+    if (!running) return; // Stop if not running
+
+    const interval = setInterval(() => {
+      setIndex((prevIndex) => (prevIndex + 1) % waitingMessage.length);
+    }, 3000); // Change message every second
+
+    // Stop the interval after 8 seconds (8 messages)
+    const timeout = setTimeout(() => {
+      setRunning(false); // Stop updating after 8 seconds
+      clearInterval(interval); // Clear interval
+    }, 13000);
+
+    return () => {
+      clearInterval(interval);
+      clearTimeout(timeout);
+    };
+  }, [running]);
 
   // Typecast location.state to the expected structure
   const projectData = location.state as { _id?: string; name?: string; description?: string; prompt?: string } || {};
@@ -711,6 +743,7 @@ export const Editable = {
     })));
 
     setLlmMessages(x => [...x, { role: "assistant", content: cleanedResponse }])
+    handlePreview();
   }
 
   useEffect(() => {
@@ -810,7 +843,7 @@ export const Editable = {
 
       console.log("Files updated successfully:", updatedFiles);
       // Success Popup
-    setTimeout(() => alert("Style changes saved successfully!"), 500);
+      setTimeout(() => alert("Style changes saved successfully!"), 500);
 
     } catch (error) {
       console.error("Error fetching style changes:", error);
@@ -988,35 +1021,72 @@ export const Editable = {
 
   return (
     <div className="min-h-screen bg-gray-900 flex flex-col spac">
-      <header className="bg-gray-800 border-b border-gray-700 px-6 py-4 space-x-3">
-        <h1 className="text-xl font-semibold text-gray-100">Website Builder</h1>
-        <p className="text-sm text-gray-400 mt-1">Prompt: {prompt}</p>
-        <button
-          className={`bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 ease-in-out ${isProcessing ? "opacity-50 cursor-not-allowed" : ""
-            }`}
-          onClick={handleClick}
-          disabled={isProcessing} // Disable button while processing
-        >
-          {isProcessing ? "Saving..." : "Save Changes"}
-        </button>
 
-        <button
+
+      <header className="bg-gray-800 border-b border-gray-700 px-6 py-4 space-x-3">
+
+        <p className="text-sm text-gray-400 m-3">Prompt: {prompt}</p>
+        <div className='flex items-center justify-between'>
+
+
+          <div className='flex gap-5'>
+
+
+            <button
+              className={`bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 ease-in-out ${isProcessing ? "opacity-50 cursor-not-allowed" : ""
+                }`}
+              onClick={handleClick}
+              disabled={isProcessing} // Disable button while processing
+            >
+              {isProcessing ? "Saving..." : "Save Changes"}
+            </button>
+
+            {/* <button
           className={`bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 ease-in-out ${isProcessing ? "opacity-50 cursor-not-allowed" : ""
             }`}
           onClick={handlePreview}
           disabled={isProcessing} // Disable button while processing
         >
           "Click here to Preview"
-        </button>
-        <button
-          onClick={handleDownloadCode}
-          disabled={loading}
-          className={`
+        </button> */}
+            <button
+              onClick={handleDownloadCode}
+              disabled={loading}
+              className={`
               w-full md:w-auto px-6 py-3 rounded-lg font-medium
               ${loading ? 'bg-gray-600' : 'bg-blue-600 hover:bg-blue-700'}
               transition-colors duration-200
             `}
-        >Download Code</button>
+            >Download Code
+
+            </button>
+
+            {
+            <li className="text-gray-200 text-lg font-semibold bg-gray-900 px-6 py-3 rounded-lg shadow-lg">
+              {waitingMessage[index]}
+            </li>
+
+          }
+
+          </div>
+
+         
+
+          <nav className="flex justify-around text-slate-300 text-lg  ">
+            {/* <div className='flex items-center  px-3 py-2 rounded-md font-medium '>
+              Project name: {project.name?project.name:"undefined"}
+            </div> */}
+
+            <Link to="/profile" className="flex items-center bg-blue-600 px-3 py-2 rounded-md font-medium transition-all duration-300 ease-in-out hover:scale-105 ">
+              Dashboard
+            </Link>
+
+          </nav>
+        </div>
+
+
+
+
 
         {Message && !isProcessing && <div className={`
               w-1/12 md:w-auto px-6 py-3 rounded-lg font-medium text-white
@@ -1033,8 +1103,25 @@ export const Editable = {
       </header>
 
       <div className="flex-1 overflow-hidden">
-        <div className="h-full grid grid-cols-4 gap-6 p-6">
-          <div className="col-span-1 space-y-6 overflow-auto">
+        <div className="h-full flex justify-between">
+
+          <div className="col-span-1  w-[19%]">
+            <FileExplorer
+              files={files}
+              onFileSelect={setSelectedFile}
+            />
+          </div>
+          <div className="col-span-2 bg-gray-900 rounded-lg shadow-lg p-4 h-[calc(100vh-8rem)] w-[63%] ">
+            <TabView activeTab={activeTab} onTabChange={setActiveTab} />
+            <div className="h-[calc(100%-4rem)]">
+              {activeTab === 'code' ? (
+                <CodeEditor file={selectedFile} />
+              ) : (
+                <PreviewFrame webContainer={webcontainer} files={files} />
+              )}
+            </div>
+          </div>
+          <div className="col-span-1 space-y-6 overflow-auto ">
             <div>
               <div className="max-h-[75vh] overflow-scroll">
                 <StepsList
@@ -1043,6 +1130,7 @@ export const Editable = {
                   onStepClick={setCurrentStep}
                 />
               </div>
+
               <div>
                 {/* <div className='flex'>
                   <br />
@@ -1078,22 +1166,6 @@ export const Editable = {
                   </div>}
                 </div> */}
               </div>
-            </div>
-          </div>
-          <div className="col-span-1">
-            <FileExplorer
-              files={files}
-              onFileSelect={setSelectedFile}
-            />
-          </div>
-          <div className="col-span-2 bg-gray-900 rounded-lg shadow-lg p-4 h-[calc(100vh-8rem)]">
-            <TabView activeTab={activeTab} onTabChange={setActiveTab} />
-            <div className="h-[calc(100%-4rem)]">
-              {activeTab === 'code' ? (
-                <CodeEditor file={selectedFile} />
-              ) : (
-                <PreviewFrame webContainer={webcontainer} files={files} />
-              )}
             </div>
           </div>
         </div>
