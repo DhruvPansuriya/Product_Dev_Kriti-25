@@ -21,7 +21,7 @@ Our AI-powered Text-to-Website Generator transforms simple text prompts into ful
 
 ## Key Features
 
-1. **Costumize Your Generated Website with Live Editing:**
+1. **Customize Your Generated Website with Live Editing:**
 
    - No Code Editing for a Seamless Experience .
 
