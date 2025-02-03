@@ -62,7 +62,7 @@ The design of pages is at [Figma File Link](https://www.figma.com/file/uglTzpF9R
 
 Login Page
 
-<img src="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/1015f/MainBefore.jpg" alt="login page" height ="300" width="400">
+<img src="./Login.jpg" alt="login page" height ="300" width="400">
 
 Explore Page
 
