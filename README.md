@@ -91,7 +91,9 @@ Create Page
 - [Express.js](https://expressjs.com/) - The web framework
 - [React](https://reactjs.org/) - The frontend library
 - [Node.js](https://nodejs.org/) - The server environment  
-
+- [Gemini LLM Model using Vertex AI](https://cloud.google.com/vertex-ai) - The LLM Model used
+- [Pickle](https://docs.python.org/3/library/pickle.html) - For storing the model variables
+   
 ## Dependencies
 
 ### Front End Dependencies
