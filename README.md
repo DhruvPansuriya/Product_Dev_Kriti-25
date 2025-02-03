@@ -49,14 +49,14 @@ As we move forward, these insights will guide the development of a collaborative
 
 ## Future Updates
 
-We will consider exploring the following features to enhance the functionality and user experience of Campus Collaboration in the future:
+ We will consider exploring the following features to enhance the functionality and user experience of generating websites in the future:
 
-1. **Project Analytics:**
+1. **Reprompting Implementation:**
 
-   - Provide insights into project analytics, including views, engagement metrics, and trends, to help users understand the impact of their projects.
+   - Integrate reprompting functionality to allow users to iteratively refine and modify the generated website response according to their needs.
 
-2. **Collaborative Tools:**
-   - Integrate collaborative tools such as real-time document editing, code collaboration, and discussion forums to enhance project collaboration
+2. **Drag and Drop Implementation:**
+   - Implement a real-time collaborative drag-and-drop interface that enables seamless website editing, allowing users to adjust elements, navigation menus, fonts, and colors dynamically.
 
 ## Design of Pages
 
