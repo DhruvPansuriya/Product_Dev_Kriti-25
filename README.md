@@ -62,27 +62,27 @@ The design of pages is at [Figma File Link](https://www.figma.com/file/uglTzpF9R
 
 Landing Page
 
-<img src="./Landing.png" alt="login page" height ="300" width="400">
+<img src="./Landing.png" alt="login page" height ="400" width="400">
 
 SignUp Page
 
-<img src="./SignUp.jpg" alt="login page" height ="600" width="400">
+<img src="./SignUp.jpg" alt="login page" height ="400" width="400">
 
 Login Page
 
-<img src="./Login.jpg" alt="login page" height ="300" width="400">
+<img src="./Login.jpg" alt="login page" height ="400" width="400">
 
 Dashboard Page
 
-<img src="./DashBoard.jpg" alt="project page" height ="600" width="400">
+<img src="./DashBoard.jpg" alt="project page" height ="400" width="400">
 
 Prompt Page
 
-<img src="./Prompt.jpg" alt="profile page" height ="300" width="400">
+<img src="./Prompt.jpg" alt="profile page" height ="400" width="400">
 
 Create Page
 
-<img src="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/1015f/MainBefore.jpg" alt="profile page" height ="300" width="400">
+<img src="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/1015f/MainBefore.jpg" alt="profile page" height ="400" width="400">
 
 
 ## Tech-Stack Used
