@@ -13,6 +13,8 @@ Customizable Components: Includes pre-designed components like headers, footers,
 Seamless Integration: Supports embedding multimedia, social media links, and third-party tools.
 Instant Preview: Real-time preview feature to visualize changes instantly.
 
+Our website builder leverages the power of Machine Learning (ML), specifically a Large Language Model (LLM), to assist users in generating fully functional websites from natural language prompts. This integration allows users to describe their website requirements in simple terms, and the AI intelligently translates those descriptions into structured and responsive web pages.
+
 ## Overview
 
 Our AI-powered Text-to-Website Generator transforms simple text prompts into fully functional, professional-looking websites. Designed for users with little to no coding experience, this tool streamlines the website creation process. Whether for personal projects, portfolios, or business websites, our generator ensures a hassle-free experience with stunning results.
