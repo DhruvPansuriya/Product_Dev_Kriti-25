@@ -228,4 +228,6 @@ npm run dev
 npm run dev 
 ```
 
-The server should now be running on [http://localhost:3000](http://localhost:3000).
+The server should now be running on [http://localhost:5001](http://localhost:5001).
+
+The Website should now be running on [http://localhost:5173](http://localhost:5173).
