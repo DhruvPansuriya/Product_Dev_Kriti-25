@@ -60,13 +60,13 @@ We will consider exploring the following features to enhance the functionality a
 
 The design of pages is at [Figma File Link](https://www.figma.com/file/uglTzpF9RVahosX0g2aU5u/Kriti24-App-Dev?type=design&node-id=1046-2151&mode=design&t=XY9j1ci3AIUhR2Wl-0)
 
+SignUp Page
+
+<img src="./SignUp.jpg" alt="login page" height ="600" width="400">
+
 Login Page
 
 <img src="./Login.jpg" alt="login page" height ="300" width="400">
-
-Explore Page
-
-<img src="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/1015f/MainBefore.jpg" alt="login page" height ="600" width="400">
 
 Personal Chat
 
