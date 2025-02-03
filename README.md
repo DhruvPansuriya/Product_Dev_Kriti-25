@@ -66,19 +66,19 @@ Landing Page
 
 SignUp Page
 
-<img src="./SignUp.jpg" alt="login page" height ="400" width="400">
+<img src="./SignUp.jpg" alt="login page" height ="400" width="600">
 
 Login Page
 
-<img src="./Login.jpg" alt="login page" height ="400" width="400">
+<img src="./Login.jpg" alt="login page" height ="400" width="600">
 
 Dashboard Page
 
-<img src="./DashBoard.jpg" alt="project page" height ="400" width="400">
+<img src="./DashBoard.jpg" alt="project page" height ="400" width="600">
 
 Prompt Page
 
-<img src="./Prompt.jpg" alt="profile page" height ="400" width="400">
+<img src="./Prompt.jpg" alt="profile page" height ="400" width="600">
 
 Create Page
 
