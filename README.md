@@ -60,8 +60,6 @@ We will consider exploring the following features to enhance the functionality a
 
 ## Design of Pages
 
-The design of pages is at [Figma File Link](https://www.figma.com/file/uglTzpF9RVahosX0g2aU5u/Kriti24-App-Dev?type=design&node-id=1046-2151&mode=design&t=XY9j1ci3AIUhR2Wl-0)
-
 Landing Page
 
 <img src="./Landing.png" alt="login page" height ="400" width="600">
