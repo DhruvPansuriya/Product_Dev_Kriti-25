@@ -62,7 +62,7 @@ The design of pages is at [Figma File Link](https://www.figma.com/file/uglTzpF9R
 
 Landing Page
 
-<img src="./Landing.png" alt="login page" height ="400" width="400">
+<img src="./Landing.png" alt="login page" height ="400" width="600">
 
 SignUp Page
 
