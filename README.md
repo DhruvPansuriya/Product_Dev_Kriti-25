@@ -97,7 +97,7 @@ Preview Page
 
 ## Installation
 
-Follow these steps to install and run the project:
+Follow these steps to install and run the project in your device:
 
 ### 1. Set Up the Server
 
