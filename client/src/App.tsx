@@ -6,6 +6,9 @@ import Profile from './pages/Profile';
 import CreateProject from './pages/CreateProject';
 import ProjectDetails from './pages/ProjectDetails';
 
+// app.tsx updated code
+
+
 function App() {
   return (
     <BrowserRouter>
